@@ -18,5 +18,7 @@
   "item.orespawntest.corn": "Corn",
   "item.orespawntest.blt": "BLT Sandwich",
   "item.orespawntest.tomato": "Tomato",
-  "item.orespawntest.buttercandy": "Buttercandy"
+  "item.orespawntest.buttercandy": "Buttercandy",
+  "items.orespawntest.salt": "Salt",
+  "items.orespawntest.oresalt": "Salt Ore"
 }

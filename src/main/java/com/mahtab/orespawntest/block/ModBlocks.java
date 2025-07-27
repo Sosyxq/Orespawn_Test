@@ -54,6 +54,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(6f,5f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
+    public static final RegistryObject<Block> ORESALT = registerBlock("oresalt",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f,3f).requiresCorrectToolForDrops()));
+
     private static <T extends Block> RegistryObject<T>  registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlocksItem(name, toReturn);

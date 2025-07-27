@@ -39,6 +39,7 @@ public class OrespawnTest
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
@@ -58,6 +59,7 @@ public class OrespawnTest
             event.accept(ModItems.URANIUM_NUGGET);
             event.accept(ModItems.RUBY);
             event.accept(ModItems.AMETHYST);
+            event.accept(ModItems.SALT);
 
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
@@ -69,6 +71,8 @@ public class OrespawnTest
             event.accept(ModBlocks.BLOCKAMETHYST);
             event.accept(ModBlocks.ORERUBY);
             event.accept(ModBlocks.BLOCKRUBY);
+            event.accept(ModBlocks.ORESALT);
+
         }
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItems.CORN);
@@ -76,6 +80,7 @@ public class OrespawnTest
             event.accept(ModItems.TOMATO);
             event.accept(ModItems.BUTTERCANDY);
         }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

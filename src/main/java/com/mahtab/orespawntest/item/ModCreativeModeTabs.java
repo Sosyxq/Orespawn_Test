@@ -26,6 +26,8 @@ public class ModCreativeModeTabs {
                 output.accept(ModBlocks.URANIUM_ORE.get());
                 output.accept(ModBlocks.OREAMETHYST.get());
                 output.accept(ModBlocks.ORERUBY.get());
+                output.accept(ModBlocks.ORESALT.get());
+                output.accept(ModItems.SALT.get());
             })
             .build());
 
