@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "orespawntest:butter"
+
+    },
+    {
+      "item": "minecraft:sugar"
+
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "orespawntest:buttercandy"
+  }
+
+
+}

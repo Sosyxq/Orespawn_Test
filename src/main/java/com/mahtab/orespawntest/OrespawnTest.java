@@ -60,19 +60,12 @@ public class OrespawnTest
             event.accept(ModItems.RUBY);
             event.accept(ModItems.AMETHYST);
             event.accept(ModItems.SALT);
-
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.TITANIUM_BLOCK);
             event.accept(ModBlocks.URANIUM_BLOCK);
-            event.accept(ModBlocks.TITANIUM_ORE);
-            event.accept(ModBlocks.URANIUM_ORE);
-            event.accept(ModBlocks.OREAMETHYST);
             event.accept(ModBlocks.BLOCKAMETHYST);
-            event.accept(ModBlocks.ORERUBY);
             event.accept(ModBlocks.BLOCKRUBY);
-            event.accept(ModBlocks.ORESALT);
-
         }
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItems.CORN);
@@ -83,6 +76,16 @@ public class OrespawnTest
             event.accept(ModItems.LETTUCE);
             event.accept(ModItems.RAW_BACON);
             event.accept(ModItems.BACON);
+        }
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.ORESALT);
+            event.accept(ModBlocks.ORERUBY);
+            event.accept(ModBlocks.TITANIUM_ORE);
+            event.accept(ModBlocks.URANIUM_ORE);
+            event.accept(ModBlocks.OREAMETHYST);
+        }
+        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+
         }
 
     }

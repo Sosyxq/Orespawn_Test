@@ -58,6 +58,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(2f,3f).requiresCorrectToolForDrops()));
 
+
+
     private static <T extends Block> RegistryObject<T>  registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlocksItem(name, toReturn);
