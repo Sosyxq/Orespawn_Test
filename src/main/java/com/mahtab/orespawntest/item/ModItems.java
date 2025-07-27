@@ -2,11 +2,16 @@ package com.mahtab.orespawntest.item;
 
 import ca.weblite.objc.Proxy;
 import com.mahtab.orespawntest.OrespawnTest;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.List;
 
 public class ModItems {
    public static final DeferredRegister<Item> ITEMS =
@@ -27,7 +32,13 @@ public class ModItems {
     public static final RegistryObject<Item> CORN = ITEMS.register("corn",
             () -> new Item(new Item.Properties().food(ModFoodProperties.CORN)));
     public static final RegistryObject<Item> BLT = ITEMS.register("blt",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.BLT)));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.BLT)) {
+             @Override
+             public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+              pTooltipComponents.add(Component.translatable("tooltip.orespawntest.blt"));
+              super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+             }
+            });
     public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
             () -> new Item(new Item.Properties().food(ModFoodProperties.TOMATO)));
     public static final RegistryObject<Item> BUTTERCANDY = ITEMS.register("buttercandy",
