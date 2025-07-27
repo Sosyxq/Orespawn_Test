@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "orespawntest:titanium_block"
+
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "orespawntest:titanium_ingot"
+  }
+
+
+}

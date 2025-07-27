@@ -1,0 +1,22 @@
+{
+  "item.orespawntest.titanium_ingot": "Titanium Ingot",
+  "item.orespawntest.titanium_nugget": "Titanium Nugget",
+  "item.orespawntest.uranium_ingot": "Uranium Ingot",
+  "item.orespawntest.uranium_nugget": "Uranium Nugget",
+  "block.orespawntest.titanium_block": "Block of Titanium",
+  "block.orespawntest.uranium_block": "Block of Uranium",
+  "block.orespawntest.titanium_ore": "Titanium Ore",
+  "block.orespawntest.uranium_ore": "Uranium Ore",
+  "block.orespawntest.blockruby": "Block of Ruby",
+  "block.orespawntest.blockamethyst": "Block of Amethyst",
+  "block.orespawntest.oreruby": "Ruby Ore",
+  "block.orespawntest.oreamethyst": "Amethyst Ore",
+  "item.orespawntest.ruby": "Ruby",
+  "item.orespawntest.amethyst": "Amethyst",
+  "creativetab.orespawntest.orespawn_ores": "Orespawn Ores",
+  "creativetab.orespawntest.orespawn_ore_blocks": "Orespawn Ore Blocks",
+  "item.orespawntest.corn": "Corn",
+  "item.orespawntest.blt": "BLT Sandwich",
+  "item.orespawntest.tomato": "Tomato",
+  "item.orespawntest.buttercandy": "Buttercandy"
+}
