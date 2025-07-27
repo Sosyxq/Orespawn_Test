@@ -34,8 +34,17 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.BUTTERCANDY)));
     public static final RegistryObject<Item> SALT = ITEMS.register("salt",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BUTTER = ITEMS.register("butter",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LETTUCE = ITEMS.register("lettuce",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.LETTUCE)));
+    public static final RegistryObject<Item> RAW_BACON = ITEMS.register("raw_bacon",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.RAW_BACON)));
+ public static final RegistryObject<Item> BACON = ITEMS.register("bacon",
+         () -> new Item(new Item.Properties().food(ModFoodProperties.BACON)));
 
-    public static void register(IEventBus eventBus) {
+
+ public static void register(IEventBus eventBus) {
        ITEMS.register(eventBus);
    }
 

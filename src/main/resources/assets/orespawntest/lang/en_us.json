@@ -19,6 +19,10 @@
   "item.orespawntest.blt": "BLT Sandwich",
   "item.orespawntest.tomato": "Tomato",
   "item.orespawntest.buttercandy": "Buttercandy",
-  "items.orespawntest.salt": "Salt",
-  "items.orespawntest.oresalt": "Salt Ore"
+  "item.orespawntest.salt": "Salt",
+  "block.orespawntest.oresalt": "Salt Ore",
+  "item.orespawntest.butter": "Butter",
+  "item.orespawntest.lettuce": "Lettuce",
+  "item.orespawntest.raw_bacon": "Raw Bacon",
+  "item.orespawntest.bacon": "Cooked Bacon"
 }

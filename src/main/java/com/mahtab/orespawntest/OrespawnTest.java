@@ -79,6 +79,10 @@ public class OrespawnTest
             event.accept(ModItems.BLT);
             event.accept(ModItems.TOMATO);
             event.accept(ModItems.BUTTERCANDY);
+            event.accept(ModItems.BUTTER);
+            event.accept(ModItems.LETTUCE);
+            event.accept(ModItems.RAW_BACON);
+            event.accept(ModItems.BACON);
         }
 
     }

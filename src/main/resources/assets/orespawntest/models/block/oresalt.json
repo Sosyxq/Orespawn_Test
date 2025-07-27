@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "orespawntest:block/oreruby"
+    "all": "orespawntest:block/oresalt"
   }
 }
