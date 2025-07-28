@@ -3,9 +3,7 @@ package com.mahtab.orespawntest.item;
 import ca.weblite.objc.Proxy;
 import com.mahtab.orespawntest.OrespawnTest;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -53,6 +51,14 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.RAW_BACON)));
  public static final RegistryObject<Item> BACON = ITEMS.register("bacon",
          () -> new Item(new Item.Properties().food(ModFoodProperties.BACON)));
+ public static final RegistryObject<Item> MOBZILLASCALE = ITEMS.register("mobzillascale",
+         () -> new Item(new Item.Properties()));
+ public static final RegistryObject<Item> ULTIMATESWORD = ITEMS.register("ultimatesword",
+         () -> new SwordItem(ModToolTiers.ULTIMATE, new Item.Properties()
+                 .attributes(SwordItem.createAttributes(ModToolTiers.ULTIMATE,35,-2.4f))));
+    public static final RegistryObject<Item> ULTIMATEPICKAXE = ITEMS.register("ultimatepickaxe",
+            () -> new PickaxeItem(ModToolTiers.ULTIMATE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.ULTIMATE,35,-2.4f))));
 
 
  public static void register(IEventBus eventBus) {

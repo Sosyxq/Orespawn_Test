@@ -58,6 +58,14 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(2f,3f).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> ENDERPEARLBLOCK = registerBlock("enderpearlblock",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(2f,2f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> BLOCKMOBZILLASCALE = registerBlock("blockmobzillascale",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f,7f).requiresCorrectToolForDrops()));
+
 
 
     private static <T extends Block> RegistryObject<T>  registerBlock(String name, Supplier<T> block){

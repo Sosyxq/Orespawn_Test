@@ -38,6 +38,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.TITANIUM_ORE.get());
         dropSelf(ModBlocks.URANIUM_ORE.get());
         dropSelf(ModBlocks.ORESALT.get());
+        dropSelf(ModBlocks.ENDERPEARLBLOCK.get());
+        dropSelf(ModBlocks.BLOCKMOBZILLASCALE.get());
 
 
         this.add(ModBlocks.ORERUBY.get(),

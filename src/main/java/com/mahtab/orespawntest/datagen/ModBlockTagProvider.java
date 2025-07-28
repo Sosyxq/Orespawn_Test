@@ -29,9 +29,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLOCKRUBY.get())
                 .add(ModBlocks.ORESALT.get())
                 .add(ModBlocks.OREAMETHYST.get())
-                .add(ModBlocks.ORERUBY.get());
+                .add(ModBlocks.ORERUBY.get())
+                .add(ModBlocks.ENDERPEARLBLOCK.get())
+                .add(ModBlocks.BLOCKMOBZILLASCALE.get());
+
         tag(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.ORESALT.get());
+                .add(ModBlocks.ORESALT.get())
+                .add(ModBlocks.ENDERPEARLBLOCK.get());
+
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.URANIUM_BLOCK.get())
                 .add(ModBlocks.URANIUM_ORE.get())
@@ -40,7 +45,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.OREAMETHYST.get())
                 .add(ModBlocks.ORERUBY.get())
                 .add(ModBlocks.BLOCKAMETHYST.get())
-                .add(ModBlocks.BLOCKRUBY.get());
+                .add(ModBlocks.BLOCKRUBY.get())
+                .add(ModBlocks.BLOCKMOBZILLASCALE.get());
+
 
 
 

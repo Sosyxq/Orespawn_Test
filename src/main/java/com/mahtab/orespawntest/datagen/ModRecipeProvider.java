@@ -67,6 +67,23 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('A', ModItems.URANIUM_NUGGET.get())
                 .unlockedBy(getHasName(ModItems.URANIUM_NUGGET.get()), has(ModItems.URANIUM_NUGGET.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ENDERPEARLBLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', Items.ENDER_PEARL)
+                .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL)).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLOCKMOBZILLASCALE.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.MOBZILLASCALE.get())
+                .unlockedBy(getHasName(ModItems.MOBZILLASCALE.get()), has(ModItems.MOBZILLASCALE.get())).save(pRecipeOutput);
+
+
+
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AMETHYST.get(), 9)
                 .requires(ModBlocks.BLOCKAMETHYST.get())
@@ -92,6 +109,10 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(ModItems.TITANIUM_INGOT.get())
                 .unlockedBy(getHasName(ModItems.TITANIUM_INGOT.get()), has(ModItems.TITANIUM_INGOT.get())).save(pRecipeOutput, OrespawnTest.MOD_ID + ":titanium_nugget_fromingot");
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MOBZILLASCALE.get(), 9)
+                .requires(ModBlocks.BLOCKMOBZILLASCALE.get())
+                .unlockedBy(getHasName(ModBlocks.BLOCKMOBZILLASCALE.get()), has(ModBlocks.BLOCKMOBZILLASCALE.get())).save(pRecipeOutput);
+
 
         shapelessRecipe(pRecipeOutput, ModItems.BLT.get(), RecipeCategory.FOOD, 1,
                 List.of(Ingredient.of(ModItems.BUTTER.get()), Ingredient.of(ModItems.LETTUCE.get()), Ingredient.of(ModItems.BACON.get()), Ingredient.of(ModItems.TOMATO.get()), Ingredient.of(Items.BREAD)),
@@ -107,6 +128,9 @@ public class ModRecipeProvider extends RecipeProvider {
 
         shapelessRecipe(pRecipeOutput, ModItems.RAW_BACON.get(), RecipeCategory.FOOD, 2,
                 List.of(Ingredient.of(Items.PORKCHOP), Ingredient.of(ModItems.SALT.get())), ModItems.SALT.get(), "rawbacon");
+
+        shapelessRecipe(pRecipeOutput, Items.ENDER_PEARL, RecipeCategory.MISC, 9,
+                List.of(Ingredient.of(ModBlocks.ENDERPEARLBLOCK.get())), Items.ENDER_PEARL, "pearlswithblock");
 
 
         foodCookingAll(pRecipeOutput, ModItems.RAW_BACON.get(), RecipeCategory.FOOD, ModItems.BACON.get(), 0.35f, 200, 100,600,"bacon");

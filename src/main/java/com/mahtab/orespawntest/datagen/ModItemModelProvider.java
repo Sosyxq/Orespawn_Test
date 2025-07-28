@@ -28,6 +28,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.URANIUM_NUGGET.get());
         basicItem(ModItems.TOMATO.get());
         basicItem(ModItems.RAW_BACON.get());
+        basicItem(ModItems.MOBZILLASCALE.get());
+        basicItem(ModItems.ULTIMATESWORD.get());
+        basicItem(ModItems.ULTIMATEPICKAXE.get());
 
 
     }

@@ -60,12 +60,16 @@ public class OrespawnTest
             event.accept(ModItems.RUBY);
             event.accept(ModItems.AMETHYST);
             event.accept(ModItems.SALT);
+            event.accept(ModItems.MOBZILLASCALE);
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.TITANIUM_BLOCK);
             event.accept(ModBlocks.URANIUM_BLOCK);
             event.accept(ModBlocks.BLOCKAMETHYST);
             event.accept(ModBlocks.BLOCKRUBY);
+            event.accept(ModBlocks.ENDERPEARLBLOCK);
+            event.accept(ModBlocks.BLOCKMOBZILLASCALE);
+
         }
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItems.CORN);
@@ -86,6 +90,12 @@ public class OrespawnTest
         }
         if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
 
+        }
+        if(event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.ULTIMATESWORD);
+        }
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.ULTIMATEPICKAXE);
         }
 
     }

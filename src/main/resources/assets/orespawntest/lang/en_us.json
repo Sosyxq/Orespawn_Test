@@ -25,5 +25,10 @@
   "item.orespawntest.lettuce": "Lettuce",
   "item.orespawntest.raw_bacon": "Raw Bacon",
   "item.orespawntest.bacon": "Cooked Bacon",
-  "tooltip.orespawntest.blt": "Yum!"
+  "tooltip.orespawntest.blt": "Yum!",
+  "block.orespawntest.enderpearlblock": "Ender Pearl Block",
+  "block.orespawntest.blockmobzillascale": "Mobzilla Scale Block",
+  "item.orespawntest.mobzillascale": "Mobzilla Scale",
+  "item.orespawntest.ultimatesword": "The Ultimate Sword",
+  "item.orespawntest.ultimatepickaxe": "The Ultimate Pickaxe"
 }

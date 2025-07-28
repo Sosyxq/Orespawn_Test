@@ -26,6 +26,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.OREAMETHYST);
         blockWithItem(ModBlocks.ORERUBY);
         blockWithItem(ModBlocks.ORESALT);
+        blockWithItem(ModBlocks.ENDERPEARLBLOCK);
+        blockWithItem(ModBlocks.BLOCKMOBZILLASCALE);
 
 
     }
