@@ -6,15 +6,15 @@ import com.mahtab.orespawntest.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.SmeltingRecipe;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.common.Mod;
 
 
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider {
@@ -93,23 +93,21 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModItems.TITANIUM_INGOT.get()), has(ModItems.TITANIUM_INGOT.get())).save(pRecipeOutput, OrespawnTest.MOD_ID + ":titanium_nugget_fromingot");
 
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BLT.get())
-                .requires(ModItems.BUTTER.get())
-                .requires(ModItems.LETTUCE.get())
-                .requires(ModItems.BACON.get())
-                .requires(ModItems.TOMATO.get())
-                .requires(Items.BREAD)
-                .unlockedBy(getHasName(ModItems.BUTTER.get()), has(ModItems.BUTTER.get())).save(pRecipeOutput);
+        shapelessRecipe(pRecipeOutput, ModItems.BLT.get(), RecipeCategory.FOOD, 1,
+                List.of(Ingredient.of(ModItems.BUTTER.get()), Ingredient.of(ModItems.LETTUCE.get()), Ingredient.of(ModItems.BACON.get()), Ingredient.of(ModItems.TOMATO.get()), Ingredient.of(Items.BREAD)),
+                ModItems.BUTTER.get(), "blt_sandwich");
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.BUTTER.get(), 4)
-                .requires(Items.MILK_BUCKET)
-                .requires(Items.MILK_BUCKET)
-                .unlockedBy(getHasName(Items.MILK_BUCKET), has(Items.MILK_BUCKET)).save(pRecipeOutput);
+        shapelessRecipe(pRecipeOutput, ModItems.BUTTERCANDY.get(), RecipeCategory.FOOD, 4,
+                List.of(Ingredient.of(ModItems.BUTTER.get()), Ingredient.of(Items.SUGAR)), ModItems.BUTTER.get(), "buttercandy");
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItems.RAW_BACON.get())
-                .requires(Items.PORKCHOP)
-                .requires(ModItems.SALT.get())
-                .unlockedBy(getHasName(ModItems.SALT.get()), has(ModItems.SALT.get())).save(pRecipeOutput);
+
+        shapelessRecipe(pRecipeOutput, ModItems.BUTTER.get(), RecipeCategory.FOOD, 4,
+                List.of(Ingredient.of(Items.MILK_BUCKET), Ingredient.of(Items.MILK_BUCKET)), Items.MILK_BUCKET,  "butter");
+
+
+        shapelessRecipe(pRecipeOutput, ModItems.RAW_BACON.get(), RecipeCategory.FOOD, 2,
+                List.of(Ingredient.of(Items.PORKCHOP), Ingredient.of(ModItems.SALT.get())), ModItems.SALT.get(), "rawbacon");
+
 
         foodCookingAll(pRecipeOutput, ModItems.RAW_BACON.get(), RecipeCategory.FOOD, ModItems.BACON.get(), 0.35f, 200, 100,600,"bacon");
 
@@ -120,12 +118,6 @@ public class ModRecipeProvider extends RecipeProvider {
         oreCookingBoth(pRecipeOutput, ModBlocks.OREAMETHYST.get(), RecipeCategory.MISC, ModItems.AMETHYST.get(), 0.35f, 200, 100, "amethyst");
         oreCookingBoth(pRecipeOutput, ModBlocks.ORERUBY.get(), RecipeCategory.MISC, ModItems.RUBY.get(), 0.35f, 200, 100, "ruby");
         oreCookingBoth(pRecipeOutput, ModBlocks.ORESALT.get(), RecipeCategory.MISC, ModItems.SALT.get(), 0.35f, 200, 100, "salt");
-
-
-
-
-
-
 
     }
 
@@ -160,6 +152,25 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(input), has(input))
                 .save(output, OrespawnTest.MOD_ID + ":" + baseName + "_campfire");
     }
+
+
+    private void shapelessRecipe(RecipeOutput output, Item result, RecipeCategory category, int count,
+                                 List<Ingredient> ingredients, Item unlockItem, String recipeName) {
+        var builder = ShapelessRecipeBuilder.shapeless(category, result, count);
+
+        for (Ingredient ingredient : ingredients) {
+            builder.requires(ingredient);
+        }
+
+        builder.unlockedBy(getHasName(unlockItem), has(unlockItem));
+
+        // Call save() without the second argument, so default id is used:
+        builder.save(output);
+    }
+
+
+
+
 
 
 
