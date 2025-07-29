@@ -81,6 +81,26 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('A', ModItems.MOBZILLASCALE.get())
                 .unlockedBy(getHasName(ModItems.MOBZILLASCALE.get()), has(ModItems.MOBZILLASCALE.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ULTIMATESWORD.get())
+                .pattern(" T ")
+                .pattern(" U ")
+                .pattern(" I ")
+                .define('T', ModItems.TITANIUM_INGOT.get())
+                .define('U', ModItems.URANIUM_INGOT.get())
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModItems.TITANIUM_INGOT.get()), has(ModItems.TITANIUM_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ULTIMATEPICKAXE.get())
+                .pattern("TUT")
+                .pattern(" U ")
+                .pattern(" I ")
+                .define('T', ModItems.TITANIUM_INGOT.get())
+                .define('U', ModItems.URANIUM_INGOT.get())
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModItems.TITANIUM_INGOT.get()), has(ModItems.TITANIUM_INGOT.get())).save(pRecipeOutput);
+
+
+
 
 
 

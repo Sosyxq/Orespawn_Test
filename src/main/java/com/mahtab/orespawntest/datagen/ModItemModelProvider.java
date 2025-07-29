@@ -1,8 +1,10 @@
 package com.mahtab.orespawntest.datagen;
 
 import com.mahtab.orespawntest.OrespawnTest;
+import com.mahtab.orespawntest.customitems.UltimateSword;
 import com.mahtab.orespawntest.item.ModItems;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
