@@ -1,6 +1,7 @@
 package com.mahtab.orespawntest.item;
 
 import com.mahtab.orespawntest.OrespawnTest;
+import com.mahtab.orespawntest.customitems.UltimatePickaxe;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -55,8 +56,8 @@ public class ModItems {
     public static final RegistryObject<Item> ULTIMATESWORD = ITEMS.register("ultimatesword",
             () -> new SwordItem(ModToolTiers.ULTIMATE, new Item.Properties().stacksTo(1).attributes(SwordItem.createAttributes(ModToolTiers.ULTIMATE, 35, -2.4f))));
     public static final RegistryObject<Item> ULTIMATEPICKAXE = ITEMS.register("ultimatepickaxe",
-            () -> new PickaxeItem(ModToolTiers.ULTIMATE, new Item.Properties()
-                    .attributes(PickaxeItem.createAttributes(ModToolTiers.ULTIMATE,33,-2.4f))));
+            () -> new UltimatePickaxe(ModToolTiers.ULTIMATE, new Item.Properties()
+                    .attributes(UltimatePickaxe.createAttributes(ModToolTiers.ULTIMATE,33,-2.4f))));
 
 
  public static void register(IEventBus eventBus) {
