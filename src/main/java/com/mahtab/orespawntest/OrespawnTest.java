@@ -1,6 +1,7 @@
 package com.mahtab.orespawntest;
 
 import com.mahtab.orespawntest.block.ModBlocks;
+import com.mahtab.orespawntest.events.ModEvents;
 import com.mahtab.orespawntest.item.ModCreativeModeTabs;
 import com.mahtab.orespawntest.item.ModItems;
 import com.mojang.logging.LogUtils;
@@ -38,6 +39,7 @@ public class OrespawnTest
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        MinecraftForge.EVENT_BUS.register(ModEvents.class);
 
 
         // Register the item to a creative tab
