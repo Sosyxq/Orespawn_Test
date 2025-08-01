@@ -33,6 +33,28 @@ public class ModEvents {
             stack.enchant(enchantmentLookup.getOrThrow(Enchantments.UNBREAKING), 3);
             stack.enchant(enchantmentLookup.getOrThrow(Enchantments.FIRE_ASPECT), 2);
         }
+        if (stack.getItem() == ModItems.ULTIMATESHOVEL.get()) {
+            var player = event.getEntity();
+
+            HolderLookup.Provider registryAccess = player.level().registryAccess();
+            HolderLookup.RegistryLookup<net.minecraft.world.item.enchantment.Enchantment> enchantmentLookup = registryAccess.lookupOrThrow(Registries.ENCHANTMENT);
+
+            stack.enchant(enchantmentLookup.getOrThrow(Enchantments.EFFICIENCY), 5);
+            stack.enchant(enchantmentLookup.getOrThrow(Enchantments.FORTUNE), 5);
+            stack.enchant(enchantmentLookup.getOrThrow(Enchantments.UNBREAKING), 3);
+
+        }
+        if (stack.getItem() == ModItems.ULTIMATEAXE.get()) {
+            var player = event.getEntity();
+
+            HolderLookup.Provider registryAccess = player.level().registryAccess();
+            HolderLookup.RegistryLookup<net.minecraft.world.item.enchantment.Enchantment> enchantmentLookup = registryAccess.lookupOrThrow(Registries.ENCHANTMENT);
+
+            stack.enchant(enchantmentLookup.getOrThrow(Enchantments.EFFICIENCY), 5);
+            stack.enchant(enchantmentLookup.getOrThrow(Enchantments.FORTUNE), 5);
+            stack.enchant(enchantmentLookup.getOrThrow(Enchantments.UNBREAKING), 3);
+
+        }
     }
 }
 

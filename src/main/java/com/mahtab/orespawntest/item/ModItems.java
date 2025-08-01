@@ -58,6 +58,12 @@ public class ModItems {
     public static final RegistryObject<Item> ULTIMATEPICKAXE = ITEMS.register("ultimatepickaxe",
             () -> new UltimatePickaxe(ModToolTiers.ULTIMATE, new Item.Properties()
                     .attributes(UltimatePickaxe.createAttributes(ModToolTiers.ULTIMATE,33,-2.4f))));
+    public static final RegistryObject<Item> ULTIMATESHOVEL = ITEMS.register("ultimateshovel",
+            () -> new ShovelItem(ModToolTiers.ULTIMATE, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.ULTIMATE,32,-3))));
+    public static final RegistryObject<Item> ULTIMATEAXE = ITEMS.register("ultimateaxe",
+            () -> new AxeItem(ModToolTiers.ULTIMATE, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.ULTIMATE,34,-3))));
 
 
  public static void register(IEventBus eventBus) {

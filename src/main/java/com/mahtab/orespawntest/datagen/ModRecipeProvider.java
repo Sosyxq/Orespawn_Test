@@ -99,6 +99,26 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('I', Items.IRON_INGOT)
                 .unlockedBy(getHasName(ModItems.TITANIUM_INGOT.get()), has(ModItems.TITANIUM_INGOT.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ULTIMATESHOVEL.get())
+                .pattern(" U ")
+                .pattern(" T ")
+                .pattern(" I ")
+                .define('T', ModItems.TITANIUM_INGOT.get())
+                .define('U', ModItems.URANIUM_INGOT.get())
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModItems.TITANIUM_INGOT.get()), has(ModItems.TITANIUM_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ULTIMATEAXE.get())
+                .pattern("TU ")
+                .pattern("TI ")
+                .pattern(" I ")
+                .define('T', ModItems.TITANIUM_INGOT.get())
+                .define('U', ModItems.URANIUM_INGOT.get())
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModItems.TITANIUM_INGOT.get()), has(ModItems.TITANIUM_INGOT.get())).save(pRecipeOutput);
+
+
+
 
 
 

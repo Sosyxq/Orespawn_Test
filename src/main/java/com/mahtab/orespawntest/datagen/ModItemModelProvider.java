@@ -31,7 +31,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.MOBZILLASCALE.get());
         basicItem(ModItems.ULTIMATESWORD.get());
         basicItem(ModItems.ULTIMATEPICKAXE.get());
-
+        basicItem(ModItems.ULTIMATESHOVEL.get());
+        basicItem(ModItems.ULTIMATEAXE.get());
 
     }
 }
