@@ -3,8 +3,14 @@ package com.mahtab.orespawntest.datagen;
 import com.mahtab.orespawntest.OrespawnTest;
 import com.mahtab.orespawntest.item.ModItems;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -29,10 +35,31 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.TOMATO.get());
         basicItem(ModItems.RAW_BACON.get());
         basicItem(ModItems.MOBZILLASCALE.get());
-        basicItem(ModItems.ULTIMATESWORD.get());
-        basicItem(ModItems.ULTIMATEPICKAXE.get());
-        basicItem(ModItems.ULTIMATESHOVEL.get());
-        basicItem(ModItems.ULTIMATEAXE.get());
+        handheldItem(ModItems.ULTIMATESWORD);
+        handheldItem(ModItems.ULTIMATEPICKAXE);
+        handheldItem(ModItems.ULTIMATESHOVEL);
+        handheldItem(ModItems.ULTIMATEAXE);
+        handheldItem(ModItems.EMERALDPICKAXE);
+        handheldItem(ModItems.EMERALDSWORD);
+        handheldItem(ModItems.EMERALDSHOVEL);
+    }
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(OrespawnTest.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+
+
+
+
+
+
+
+
 
     }
-}
+
+
+
+

@@ -9,6 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.rmi.registry.Registry;
 import java.util.List;
 
 public class ModItems {
@@ -54,7 +55,7 @@ public class ModItems {
  public static final RegistryObject<Item> MOBZILLASCALE = ITEMS.register("mobzillascale",
          () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ULTIMATESWORD = ITEMS.register("ultimatesword",
-            () -> new SwordItem(ModToolTiers.ULTIMATE, new Item.Properties().stacksTo(1).attributes(SwordItem.createAttributes(ModToolTiers.ULTIMATE, 35, -2.4f))));
+            () -> new SwordItem(ModToolTiers.ULTIMATE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.ULTIMATE, 35, -2.4f))));
     public static final RegistryObject<Item> ULTIMATEPICKAXE = ITEMS.register("ultimatepickaxe",
             () -> new UltimatePickaxe(ModToolTiers.ULTIMATE, new Item.Properties()
                     .attributes(UltimatePickaxe.createAttributes(ModToolTiers.ULTIMATE,33,-2.4f))));
@@ -63,7 +64,15 @@ public class ModItems {
                     .attributes(ShovelItem.createAttributes(ModToolTiers.ULTIMATE,32,-3))));
     public static final RegistryObject<Item> ULTIMATEAXE = ITEMS.register("ultimateaxe",
             () -> new AxeItem(ModToolTiers.ULTIMATE, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(ModToolTiers.ULTIMATE,34,-3))));
+                    .attributes(AxeItem.createAttributes(ModToolTiers.ULTIMATE,32,-3))));
+    public static final RegistryObject<Item> EMERALDPICKAXE = ITEMS.register("emeraldpickaxe",
+            () -> new PickaxeItem(ModToolTiers.EMERALD, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.EMERALD, 3, -2.4f))));
+    public static final RegistryObject<Item> EMERALDSWORD = ITEMS.register("emeraldsword",
+            () -> new SwordItem(ModToolTiers.EMERALD, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.EMERALD,5,-2.4f))));
+    public static final RegistryObject<Item> EMERALDSHOVEL = ITEMS.register("emeraldshovel",
+            () -> new ShovelItem(ModToolTiers.EMERALD, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.EMERALD,2, -3))));
 
 
  public static void register(IEventBus eventBus) {

@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
@@ -116,6 +117,34 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('U', ModItems.URANIUM_INGOT.get())
                 .define('I', Items.IRON_INGOT)
                 .unlockedBy(getHasName(ModItems.TITANIUM_INGOT.get()), has(ModItems.TITANIUM_INGOT.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.EMERALDPICKAXE.get())
+                .pattern("EEE")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('E', Items.EMERALD)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD)).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.EMERALDSWORD.get())
+                .pattern(" E ")
+                .pattern(" E ")
+                .pattern(" S ")
+                .define('E', Items.EMERALD)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD)).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.EMERALDSHOVEL.get())
+                .pattern(" E ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('E', Items.EMERALD)
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD)).save(pRecipeOutput);
+
+
+
+
 
 
 

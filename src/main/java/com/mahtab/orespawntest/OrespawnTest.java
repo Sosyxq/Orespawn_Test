@@ -96,11 +96,15 @@ public class OrespawnTest
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.ULTIMATESWORD);
             event.accept(ModItems.ULTIMATEAXE);
+            event.accept(ModItems.EMERALDSWORD);
+            
         }
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.ULTIMATEPICKAXE);
             event.accept(ModItems.ULTIMATESHOVEL);
             event.accept(ModItems.ULTIMATEAXE);
+            event.accept(ModItems.EMERALDPICKAXE);
+            event.accept(ModItems.EMERALDSHOVEL);
         }
 
     }

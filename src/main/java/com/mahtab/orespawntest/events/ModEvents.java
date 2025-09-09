@@ -17,7 +17,6 @@ public class ModEvents {
     public static void onItemCrafted(PlayerEvent.ItemCraftedEvent event) {
         ItemStack stack = event.getCrafting();
 
-        // Check if the crafted item is your custom sword
         if (stack.getItem() == ModItems.ULTIMATESWORD.get()) {
             // Get the player entity
             var player = event.getEntity();
@@ -53,8 +52,17 @@ public class ModEvents {
             stack.enchant(enchantmentLookup.getOrThrow(Enchantments.EFFICIENCY), 5);
             stack.enchant(enchantmentLookup.getOrThrow(Enchantments.FORTUNE), 5);
             stack.enchant(enchantmentLookup.getOrThrow(Enchantments.UNBREAKING), 3);
+        }
+        if (stack.getItem() == ModItems.EMERALDPICKAXE.get()) {
+            var player = event.getEntity();
+
+            HolderLookup.Provider registryAccess = player.level().registryAccess();
+            HolderLookup.RegistryLookup<net.minecraft.world.item.enchantment.Enchantment> enchantmentLookup = registryAccess.lookupOrThrow(Registries.ENCHANTMENT);
+
+            stack.enchant(enchantmentLookup.getOrThrow(Enchantments.SILK_TOUCH), 1);
 
         }
-    }
+
+}
 }
 
