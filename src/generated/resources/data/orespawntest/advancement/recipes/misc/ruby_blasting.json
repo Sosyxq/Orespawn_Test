@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_oreruby": {
+      "conditions": {
+        "items": [
+          {
+            "items": "orespawntest:oreruby"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orespawntest:ruby_blasting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_oreruby"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orespawntest:ruby_blasting"
+    ]
+  }
+}

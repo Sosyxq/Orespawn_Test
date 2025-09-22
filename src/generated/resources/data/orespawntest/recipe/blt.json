@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "orespawntest:butter"
+    },
+    {
+      "item": "orespawntest:lettuce"
+    },
+    {
+      "item": "orespawntest:bacon"
+    },
+    {
+      "item": "orespawntest:tomato"
+    },
+    {
+      "item": "minecraft:bread"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "orespawntest:blt"
+  }
+}

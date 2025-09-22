@@ -1,0 +1,4 @@
+// 1.21.1	2025-07-28T20:27:12.399912	Tags for minecraft:block mod id orespawntest
+c51199bce1acab71b06bccb8c143593d1f8eda5e data/minecraft/tags/block/mineable/pickaxe.json
+3962d0fbe52df530a1fa4a120c3b1751d85ca089 data/minecraft/tags/block/needs_iron_tool.json
+6be83110f7fb7bc7dc6a6ec551253f08a9fe9459 data/minecraft/tags/block/needs_stone_tool.json

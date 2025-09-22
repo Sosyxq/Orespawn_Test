@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_oresalt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "orespawntest:oresalt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "orespawntest:salt_blasting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_oresalt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "orespawntest:salt_blasting"
+    ]
+  }
+}
