@@ -11,3 +11,7 @@ Because of that, please don't treat this as something to download, build, or red
 ## About
 
 A Minecraft Forge mod that re-adds some of the ores, blocks, tools, and food items I remember from the original mod, written as a learning exercise.
+
+## Tutorial
+
+I learned how to build this by following [Kaupenjoe](https://www.youtube.com/@ModdingByKaupenjoe)'s tutorial series on YouTube — specifically the [Forge Modding Tutorials - Minecraft 1.21.1](https://www.youtube.com/playlist?list=PLKGarocXCE1GspJBXQEGuhazihZCSSLmK) playlist. All credit for teaching me this stuff goes to him.
